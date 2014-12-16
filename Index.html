@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pool Society</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="SSOne.css" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="jsSlider.js"></script>
+    <script type="text/javascript">
+        var image1 = new Image()
+        image1.src = "img/img1.jpg"
+        var image2 = new Image()
+        image2.src = "img/img2.jpg"
+        var image3 = new Image()
+        image3.src = "img/img3.jpg"
+        var image4 = new Image()
+        image4.src = "img/img4.jpg"
+
+    </script>
+
+</head>
+<body class="body">
+    
+    <header class="mainHeader">
+
+        <img src="img/Pool Soc 3.png" />
+
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="mside">
+        <p>
+            Welcome to the NCI Society of pool
+            Here at NCI we have the fastest growing event ever....!!
+            This underground event has grown from strength to strength over the last five years since its arrival.
+        </p>
+        <p>
+            It combines real pool competition ability to attract the best players around with student athmosphere of fun
+            and entertainment.
+        </p>
+        <p>
+            Feel like you have the ability to challange the best? or need to find out more info?
+            If you're up to the task please sign up via the contact menu.
+            You will find out more about us in the about menu,
+            for calender and any upcoming events please see the events section,
+            for tips on playing please watch the videos in the coaching section as well as the rules supplied.
+
+        </p>
+    </div>
+    <div id="picslider">
+        <img src="img/img1.jpg" id="slider2" >
+
+        <script type="text/javascript">
+            var step = 1
+            function slideit() {
+
+                document.images.slider2.src = eval("image" + step + ".src")
+                if (step < 4)
+                    step++
+                else
+                    step = 1
+                setTimeout("slideit()", 2500)
+            }
+            slideit()
+        </script>
+    </div>
+
+    <div id="soundbar">
+        <audio controls>
+
+            <source src="/sound/Snooker Loopy.wma" type="audio/x-ms-wma">
+
+            <source src="/sound/Snooker Loopy.mp3" type="audio/mp3">
+
+            Your browser does not support the audio element.
+
+        </audio>
+    </div>
+
+
+
+    <div id="slider" style="right:-342px;">
+        <div id="sidebar" onclick="open_panel()">
+            <img src="img/contact.png" />
+        </div>
+        <div id="header">
+
+            <h2 id="sTitle">Contact Form</h2="sTitle">
+            <h4 id="sTitle">This is my form.Please fill it out.It's awesome!</h4>
+            <input id="dname" type="text" value="Your Name"  />
+            <input id="demail" type="text" value="Your Email" />
+            <h2 id="sTitle">Query type</h2>
+            <select>
+                <option>General Query</option>
+                <option>Tournament</option>
+                <option>Registration</option>
+                <option>Others</option>
+            </select>
+
+            <textarea type="text" value="message">Message</textarea><br />
+            <button type="submit" onclick="validateData()" >Send Message</button>
+
+        </div>
+    </div>
+   
+    -->
+</body>
+</html>

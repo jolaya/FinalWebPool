@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pool Society - About</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="SSOne.css" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="jsSlider.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script>
+
+        var map;
+
+        $(document).ready(function () {
+            var myOptions = {
+                center: new google.maps.LatLng(53.5, -7),
+                zoom: 4,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            $('#go').click(function () {
+                // test for presence of geolocation
+                if (navigator && navigator.geolocation) {
+                    // make the request for the user's position
+                    navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+                } else {
+                    error('Geolocation is not supported.');
+                }
+            });
+        });
+
+        function geo_success(position) {
+            printAddress(position.coords.latitude, position.coords.longitude);
+        }
+
+        function geo_error(err) {
+            if (err.code == 1) {
+                error('The user denied the request for location information.')
+            } else if (err.code == 2) {
+                error('Your location information is unavailable.')
+            } else if (err.code == 3) {
+                error('The request to get your location timed out.')
+            } else {
+                error('An unknown error occurred while requesting your location.')
+            }
+        }
+
+        // use Google Maps API to reverse geocode your location
+        function printAddress(latitude, longitude) {
+            // Create a Google Maps Geocoder object
+            var geocoder = new google.maps.Geocoder();
+
+            // Change coordinates into a location
+            var yourLocation = new google.maps.LatLng(latitude, longitude);
+
+
+            //Setup map and position on map
+            var myOptions = {
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: yourLocation
+            }
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            // To add the marker to the map set it up then call setMap();
+            var marker = new google.maps.Marker({
+                position: yourLocation,
+                title: "Hello World!"
+            });
+
+            marker.setMap(map);
+
+            // Use Google maps to find out about the location
+            geocoder.geocode({ 'latLng': yourLocation }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        $('#local').html('Your Address:<br />' +
+                        results[0].formatted_address);
+                    } else {
+                        error('Google did not return any results.');
+                    }
+                } else {
+                    error("Reverse Geocoding failed due to: " + status);
+                }
+            });
+        }
+
+        function error(msg) {
+            alert(msg);
+        }
+
+
+    </script>
+</head>
+<body class="body">
+
+    <header class="mainHeader">
+
+        <img src="img/Pool Soc 3.png" />
+
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id=aboutdiv>
+        <h3>About us</h3>
+
+        <p>
+            The Nci Pool Society has been running successfully for 5 years since its introduction in 2009.
+
+            It is the life and soul of the nci incorporating the best pool players from around the world.
+
+            The Room is located downstairs at Nci in the trendy Students Union area.
+
+            Ranking competitions take place throughout the college year (from September to may).
+        </p>
+            <details>
+                <summary> Committee </summary>
+            <p> The committee was founded by </p>
+            <ul>
+                <li>Ronan Brady</li>
+                <li>James Kavanagh</li>
+                <li>Jorge Olaya</li>
+                <li>Shane Gahan</li>
+            </ul>
+            <p>
+                in 2009, where they had the life changing epiphany while on their break between classes.
+            </p>
+            </details>
+            <details>
+                <summary>Current members:</summary>
+
+                <ul>
+                    <li>
+                        Ronan Brady contact no. 0861212451 office room 1.3
+                    </li>
+                    <li>
+                        James Kavanagh contact no. 087251436 office room 1.2
+                    </li>
+                    <li>
+                        Jorge Olaya contact no. 0850231549 office room 1.1
+                    </li>
+                    <li>
+                        Shane Gahan contact no. 999 office room 101
+                    </li>
+                </ul>
+            </details>
+            <h3>
+                Location
+            </h3>
+            <p>
+                Nci is located of lower mayor street, Georges Dock, Dublin 1.
+                The pool society venue is located downstairs in the students union.
+            </p>
+</div>
+
+     <div id="aboutmap">
+        <h1>Your Geolocation</h1>
+
+        <input type="button" id="go" value="Your Current Address" />
+
+        <p id="local">Your location is: </p>
+        <div id="map" style="width:350px; height:200px">></div>
+
+    </div>
+
+    <div id="slider" style="right:-342px;">
+        <div id="sidebar" onclick="open_panel()">
+            <img src="img/contact.png" />
+        </div>
+        <div id="header">
+
+            <h2 id="sTitle">Contact Form</h2>
+            <h4 id="sTitle">This is my form.Please fill it out.It's awesome!</h4>
+            <input id="dname" type="text" value="Your Name" />
+            <input id="demail" type="text" value="Your Email" />
+            <h2 id="sTitle">Query type</h2>
+            <select>
+                <option>General Query</option>
+                <option>Tournament</option>
+                <option>Registration</option>
+                <option>Others</option>
+            </select>
+
+            <textarea type="text" value="message">Message</textarea><br />
+            <button type="submit" onclick="validateData()">Send Message</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

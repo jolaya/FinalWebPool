@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pool Society Coaching</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="SSOne.css" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="jsSlider.js"></script>
+</head>
+<body class="body">
+
+    <header class="mainHeader">
+
+        <img src="img/Pool Soc 3.png" />
+
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li class ="active"><a href="#">Coaching</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="rules">
+        <h3>Rules of the Irish Pool society @ NCI</h3>
+        <h4>Objective</h4>
+        <p>To pot all of one set of colours finishing on potting the black ball</p>
+        <h4>Basic Rules (Setup /break)</h4>
+        <p>
+            Players are allowed to bring their own pool cues should they so wish.
+            White ball is placed in semi-circle at beginning (baulk end of the table). First shot can be taken from anywhere inside semicircle. This initial shot is called the break.
+            The Colours as place as illustrated in the triangle and the lower end of the table.
+            A coin shall be tossed with the winner of heads and tails to break first.
+        </p>
+        <div id="imgtriangle">
+            <img src="img/rack.jpg" />
+        </div>
+         <h4>
+            The game (from break)
+        </h4> 
+        <p>
+            If the player pots any colour ball (red or yellow), that player is declared on reds or on yellows.
+            In a case when a player pots a ball(s) from each colour set from the break, that player can choose which colour to declare him/herself on.
+            Should no ball be potted from the break the other player is free to pot either colour and taken in turns, a single shot at a time until a colour has been potted.
+            Should a player pot the white ball, the white ball is retrieved by the opponent and placed anywhere in the semi-circle at the baulk end of table. This player is entitled to two consecutive shots.
+            No back table is permitted on any colour from a potted an opponent’s white ball.
+        </p>
+        <h4>
+            Minor Fouls
+        </h4>
+        <p>
+            <b>Two shots are given to the opponent in the following scenarios;</b>
+            Hit the wrong colour first.
+            Pot the white
+            Knock the white ball off the table.
+            Don’t hit any ball with the white ball
+            Push the white with the cue rather than a cue action.
+            A player accidentally or purposely interferes (displaces) any of the pool balls of any colour.
+
+        </p>
+        <h4>
+            Major Fouls (causes Forfeits)
+        </h4>
+        <p>
+            3 minor fouls.
+            A black ball is potted by a player who still has their prospective colour(s) remaining.
+            The black ball is potted when a player didn’t name their pocket.
+
+        </p>
+        <h4>
+            The Freeball rule
+        </h4>
+        <p> If a player snookers another player (ie they can’t hit their prospective colour) in a shot in which they committed a minor foul then the opponent is entitled to a free ball. This means they can hit any ball they want for that shot.
+Freeball  when a player is on a colour entitles that player to two shots in total (one of which is freeball to get out of the snooker).
+Freeball when a player is on the black entitles them to only one shot in total.
+        </p>
+        <h4>
+            Code of conduct
+        </h4>
+        <p>
+            No taunting of any kind is permitted.
+            Standing over an opponent’s pocket eye line is not permitted.
+            Standing in an opponent’s way is not permitted.
+            No disruptive noise is permitted during shots.
+            While snacking and drinking is permitted in the venue, none is permitted at the pool tables.
+            At least one foot must be on the ground at all times when taking a shot.
+
+        </p>
+
+    </div>
+    <div id="video">
+        <iframe src="//www.youtube.com/embed/qbmNcYH52eo" frameborder="0"></iframe>
+        <video class="normalvid" src="/video/video1.mp4" controls></video>
+        <video class="normalvid" src="/video/video2.mp4" controls></video>
+        <video class="normalvid" src="/video/video3.mp4" controls></video>
+        <video class="normalvid" src="/video/video4.mp4" controls></video>
+        <video class="rotatevideo" src="/video/video5.mp4" controls></video>
+
+        
+    
+    </div>
+    
+    <div id="slider" style="right:-342px;">
+        <div id="sidebar" onclick="open_panel()">
+            <img src="img/contact.png" />
+        </div>
+        <div id="header">
+
+            <h2 id="sTitle">Contact Form</h2>
+            <h4 id="sTitle">This is my form.Please fill it out.It's awesome!</h4>
+            <input id="dname" type="text" value="Your Name" />
+            <input id="demail" type="text" value="Your Email" />
+            <h2 id="sTitle">Query type</h2>
+            <select>
+                <option>General Query</option>
+                <option>Tournament</option>
+                <option>Registration</option>
+                <option>Others</option>
+            </select>
+
+            <textarea type="text" value="message">Message</textarea><br />
+            <button type="submit" onclick="validateData()">Send Message</button>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

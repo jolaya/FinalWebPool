@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pool Society - Events</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="SSOne.css" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="jsSlider.js"></script>
+</head>
+<body class="body">
+
+    <header class="mainHeader">
+
+        <img src="img/Pool Soc 3.png" />
+
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="#">Events</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="calen">
+        <iframe src="https://www.google.com/calendar/embed?src=ncipoolsoc%40gmail.com&ctz=Europe/Dublin" style="border: 0" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div id="slider" style="right:-342px;">
+        <div id="sidebar" onclick="open_panel()">
+            <img src="img/contact.png" />
+        </div>
+        <div id="header">
+
+            <h2 id="sTitle">Contact Form</h2>
+            <h4 id="sTitle">This is my form.Please fill it out.It's awesome!</h4>
+            <input id="dname" type="text" value="Your Name" />
+            <input id="demail" type="text" value="Your Email" />
+            <h2 id="sTitle">Query type</h2>
+            <select>
+                <option>General Query</option>
+                <option>Tournament</option>
+                <option>Registration</option>
+                <option>Others</option>
+            </select>
+
+            <textarea type="text" value="message">Message</textarea><br />
+            <button type="submit" onclick="validateData()">Send Message</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
