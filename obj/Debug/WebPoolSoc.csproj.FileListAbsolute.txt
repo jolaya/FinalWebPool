@@ -1,0 +1,6 @@
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\bin\WebPoolSoc.dll.config
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\bin\WebPoolSoc.dll
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\bin\WebPoolSoc.pdb
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\obj\Debug\WebPoolSoc.csprojResolveAssemblyReference.cache
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\obj\Debug\WebPoolSoc.dll
+H:\Semester 1\Web Design\VisualStudio\WebPoolSoc\WebPoolSoc\obj\Debug\WebPoolSoc.pdb

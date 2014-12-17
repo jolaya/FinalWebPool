@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59E09977-C852-47D9-8621-F97F7056B608}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPoolSoc</RootNamespace>
+    <AssemblyName>WebPoolSoc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\WebPoolSoc.dll.config" />
+    <Content Include="video\VIDEO1.ogg" />
+    <Content Include="video\VIDEO1.webm" />
+    <Content Include="video\VIDEO2.ogg" />
+    <Content Include="video\VIDEO2.webm" />
+    <Content Include="video\VIDEO3.ogg" />
+    <Content Include="video\VIDEO3.webm" />
+    <Content Include="video\VIDEO4.ogg" />
+    <Content Include="video\VIDEO4.webm" />
+    <Content Include="video\VIDEO5.ogg" />
+    <Content Include="video\VIDEO5.webm" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.html" />
+    <Content Include="bin\WebPoolSoc.dll" />
+    <Content Include="bin\WebPoolSoc.pdb" />
+    <Content Include="coaching.html" />
+    <Content Include="events.html" />
+    <Content Include="img\backg.jpg" />
+    <Content Include="img\contact.png" />
+    <Content Include="img\eve_jackson.jpg" />
+    <Content Include="img\eve_jackson2.jpg" />
+    <Content Include="img\eve_jacksonsmall.jpg" />
+    <Content Include="img\img1.jpg" />
+    <Content Include="img\img2.jpg" />
+    <Content Include="img\img3.jpg" />
+    <Content Include="img\img4.jpg" />
+    <Content Include="img\john_smith.jpg" />
+    <Content Include="img\john_smithsmall.jpg" />
+    <Content Include="img\madball.jpg" />
+    <Content Include="img\madball.png" />
+    <Content Include="img\mark_spitz.jpg" />
+    <Content Include="img\mark_spitzsmall.jpg" />
+    <Content Include="img\mary_brown.jpg" />
+    <Content Include="img\mary_brownsmall.jpg" />
+    <Content Include="img\paula_rockford.jpg" />
+    <Content Include="img\paula_rockfordsmall.jpg" />
+    <Content Include="img\paul_doyle.jpg" />
+    <Content Include="img\paul_doylesmall.jpg" />
+    <Content Include="img\Pool Soc 3.png" />
+    <Content Include="img\rack.jpg" />
+    <Content Include="img\siobhan_osullivan.jpg" />
+    <Content Include="img\siobhan_osullivansmall.jpg" />
+    <Content Include="img\tom_murphy.jpg" />
+    <Content Include="img\tom_murphysmall.jpg" />
+    <Content Include="Index.html" />
+    <Content Include="jsSlider.js" />
+    <Content Include="rankings.html" />
+    <Content Include="sound\Snooker Loopy.mp3" />
+    <Content Include="sound\Snooker Loopy.wma" />
+    <Content Include="SSOne.css" />
+    <Content Include="video\VIDEO1.mp4" />
+    <Content Include="video\VIDEO2.mp4" />
+    <Content Include="video\VIDEO3.mp4" />
+    <Content Include="video\VIDEO4.mp4" />
+    <Content Include="video\VIDEO5.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54931</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54879/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
